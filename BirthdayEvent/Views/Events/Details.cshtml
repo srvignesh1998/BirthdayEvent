@@ -1,0 +1,106 @@
+﻿@model BirthdayEvent.Models.Event
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Event</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.eventName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.applicantName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.applicantName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplicantAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicantAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.applicantMobile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.applicantMobile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.applicantEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.applicantEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eventAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eventDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eventTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eventMenuId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventMenuId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.addonId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.addonId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EventCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventCost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.eventId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

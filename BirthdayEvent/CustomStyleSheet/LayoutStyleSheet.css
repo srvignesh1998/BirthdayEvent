@@ -1,0 +1,31 @@
+﻿/*green navbar*/
+
+.navbar-inverse {
+    background-color: navy !important;
+}
+
+a.mynav {
+    background-color: navy !important;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
+    background-color: navy !important;
+    color: #ffffff;
+}
+/* end of green navbar
+
+
+    /*green navbar 
+.navbar-inverse {
+    background-color: #28a745 !important;
+}
+
+a.mynav {
+    background-color: #28a745 !important;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;
+}
+/* end of green navbar*/ 
+

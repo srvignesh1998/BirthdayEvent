@@ -1,0 +1,61 @@
+﻿@model BirthdayEvent.Models.Theme
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h2>Theme Details -  @Html.DisplayFor(model => model.themeName)</h2>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+            <tr class="danger">
+                <th data-defaultsign="_19"> Theme ID</th>
+                <th>  @Html.DisplayFor(model => model.themeId)   </th>
+            </tr>
+            <tr class="danger">
+                <th data-defaultsign="AZ">Theme Name</th>
+                <th>  @Html.DisplayFor(model => model.themeName)   </th>
+            </tr>
+            <tr class="danger">
+                <th data-defaultsign="AZ">Theme Image Url</th>
+                <th> @Html.DisplayFor(model => model.themeImageURL)    </th>
+            </tr>
+            <tr class="danger">
+                <th data-defaultsign="AZ">Theme Address</th>
+                <th>  @Html.DisplayFor(model => model.themeAddress)   </th>
+            </tr>
+            <tr class="danger">
+                <th data-defaultsign="AZ">Theme Description</th>
+                <th>  @Html.DisplayFor(model => model.themeDescription)   </th>
+            </tr>
+            <tr class="danger">
+                <th data-defaultsign="AZ">Theme Photographer</th>
+                <th>  @Html.DisplayFor(model => model.themePhotographer)   </th>
+            </tr>
+            <tr class="danger">
+                <th data-defaultsign="AZ">Theme Videographer</th>
+                <th>  @Html.DisplayFor(model => model.themeVideographer)   </th>
+            </tr>
+            <tr class="danger">
+                <th data-defaultsign="AZ">Theme ReturnGift</th>
+                <th> @Html.DisplayFor(model => model.themeReturnGift)    </th>
+            </tr>
+            <tr class="danger">
+                <th data-defaultsign="month">Cost</th>
+                <th>   @Html.DisplayFor(model => model.themeCost)  </th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+<p>
+    <a href="@Url.Action("Index", "Themes")" class="btn btn-primary">
+        <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Back
+    </a>
+    <a href="@Url.Action("Edit", "Themes", new { id = Model.themeId } )" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit
+    </a>
+</p>

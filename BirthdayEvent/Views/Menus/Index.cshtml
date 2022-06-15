@@ -1,0 +1,76 @@
+﻿@model IEnumerable<BirthdayEvent.Models.Menu>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    if (Session["userID"] == null)
+    {
+        Response.Redirect("~/Home/Login");
+    }
+}
+
+<h2>Food Menu Management</h2>
+<p>
+    <a href="@Url.Action("Create", "Menus")" class="btn btn-primary">
+        <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add Food Menu
+    </a>
+</p>
+
+
+<div class="table-responsive">
+    <table class="table table-bordered table-condensed table-striped table-hover sortable">
+        @if (Model.Count() == 0)
+        {
+            <tr>
+                <td colspan="10">No Record's found.</td>
+            </tr>
+
+        }
+        else
+        {
+            <thead>
+                <tr class="danger text-center">
+                    <th data-defaultsign="_19"> Food Menu ID</th>
+                    <th data-defaultsign="AZ">Food Image Url</th>
+                    <th data-defaultsign="AZ">Food Category</th>
+                    <th data-defaultsign="AZ">Food Menu List</th>
+                    <th data-defaultsign="month">Cost</th>
+                    <th data-defaultsign="AZ">Actions</th>
+                </tr>
+            </thead>
+
+            foreach (var item in Model)
+            {
+    <tr>
+        <td class="text-center">
+            @Html.DisplayFor(modelItem => item.foodMenuId)
+        </td>
+        <td class="text-center">
+            <img src="@Html.Raw(item.foodMenuImageURL)" height="150px" width="250px" alt="a description of the image">
+        </td>
+        <td class="text-center">
+            @Html.DisplayFor(modelItem => item.foodMenuType)
+        </td>
+        <td class="text-center">
+            @Html.DisplayFor(modelItem => item.foodMenuItems)
+        </td>
+        <td class="text-center">
+            @Html.DisplayFor(modelItem => item.foodMenuCost)
+        </td>
+        <td class="text-center">
+            <a href="@Url.Action("Details", "Menus", new { id = item.foodMenuId })" class="btn btn-primary">
+                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> View
+            </a>
+            <a href="@Url.Action("Edit", "Menus", new { id = item.foodMenuId })" class="btn btn-success">
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit
+            </a>
+            <a href="@Url.Action("Delete", "Menus", new { id = item.foodMenuId })" class="btn btn-danger">
+                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete
+            </a>
+        </td>
+    </tr>
+
+            }
+        }
+    </table>
+</div>

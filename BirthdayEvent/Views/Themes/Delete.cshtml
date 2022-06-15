@@ -1,0 +1,97 @@
+﻿@model BirthdayEvent.Models.Theme
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Delete Theme -  @Html.DisplayFor(model => model.themeName)</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Theme</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Theme ID
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.themeId)
+        </dd>
+        <dt>
+            Theme Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.themeName)
+        </dd>
+
+        <dt>
+            Theme Image URL
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.themeImageURL)
+        </dd>
+
+        <dt>
+            Theme Address
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.themeAddress)
+        </dd>
+
+        <dt>
+            Theme Description
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.themeDescription)
+        </dd>
+
+        <dt>
+            Theme Photo grapher
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.themePhotographer)
+        </dd>
+
+        <dt>
+            Theme Video grapher
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.themeVideographer)
+        </dd>
+
+        <dt>
+            Theme Return Gift
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.themeReturnGift)
+        </dd>
+
+        <dt>
+            TemeCost
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.themeCost)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-actions no-color">
+            <a href="@Url.Action("Index", "Themes")" class="btn btn-primary">
+                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Back
+            </a>
+            <input type="submit" value="Delete" onclick="return confirm('Are you sure want to Delete Theme?')" class="btn btn-primary" />
+        </div>
+    }
+</div>
