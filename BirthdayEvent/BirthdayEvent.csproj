@@ -140,8 +140,21 @@
     <Compile Include="Migrations\202206131913115_TableCreated.designer.cs">
       <DependentUpon>202206131913115_TableCreated.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206230931479_Login.cs" />
+    <Compile Include="Migrations\202206230931479_Login.Designer.cs">
+      <DependentUpon>202206230931479_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206231145371_registration.cs" />
+    <Compile Include="Migrations\202206231145371_registration.Designer.cs">
+      <DependentUpon>202206231145371_registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206231821409_cart-update.cs" />
+    <Compile Include="Migrations\202206231821409_cart-update.Designer.cs">
+      <DependentUpon>202206231821409_cart-update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AddOn.cs" />
+    <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\Theme.cs" />
@@ -186,8 +199,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\AddOns\Create.cshtml" />
     <Content Include="Views\AddOns\Delete.cshtml" />
@@ -216,7 +227,6 @@
     <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Register.cshtml" />
-    <Content Include="Views\Home\Registration.cshtml" />
     <Content Include="Views\Shared\_UserLayout.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Admin\Create.cshtml" />
@@ -224,7 +234,6 @@
     <Content Include="Views\Admin\Details.cshtml" />
     <Content Include="Views\Admin\Edit.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
-    <Content Include="Views\Home\AdminLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -245,6 +254,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202206131913115_TableCreated.resx">
       <DependentUpon>202206131913115_TableCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206230931479_Login.resx">
+      <DependentUpon>202206230931479_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206231145371_registration.resx">
+      <DependentUpon>202206231145371_registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206231821409_cart-update.resx">
+      <DependentUpon>202206231821409_cart-update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

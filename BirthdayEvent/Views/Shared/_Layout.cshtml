@@ -16,16 +16,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Birthday Event Management System", "Login", "Home", new { area = "" }, new { @class = "navbar-brand active" })
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Users", "Index", "Home")</li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() != "" ? "active" : "")">@Html.ActionLink("Birthday Event Management System", "Login", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Register" ? "active" : "")">@Html.ActionLink("Register", "Register", "Home")</li>
                     <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Login" ? "active" : "")">@Html.ActionLink("Login", "Login", "Home")</li>
-                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "AdminLogin" ? "active" : "")">@Html.ActionLink("AdminLogin", "AdminLogin", "Home")</li>
+              
                 </ul>
             </div>
         </div>
@@ -34,7 +33,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Birthday Event Management System ,Virtusa</p>
+            <p>&copy; @DateTime.Now.Date - Birthday Event Management System ,Virtusa</p>
         </footer>
     </div>
 

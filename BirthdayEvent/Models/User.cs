@@ -13,19 +13,28 @@ namespace BirthdayEvent.Models
         public int userId { get; set; }
 
         [Required(ErrorMessage = "Email Id is Required")]
+        [EmailAddress(ErrorMessage = "Invalid email address.")]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Name is Required")]
         public string name { get; set; }
 
         [Required(ErrorMessage = "Password is Required")]
+        [MinLength(6, ErrorMessage = "Need min 6 character")]
         public string password { get; set; }
+
+        [Required(ErrorMessage = "Confirm is Required")]
+        [Compare("password", ErrorMessage = "Passwords do not match")]
+        public string ConfirmPassword { get; set; }
 
         [Required(ErrorMessage = "Mobile Number is Required")]
         public string mobileNumber { get; set; }
 
+        [Required(ErrorMessage = "User Role is Required")]
         public string userRole { get; set; }
-        public object LoginErrorMessge { get; internal set; }
+
+        public string LoginErrorMessge { get; set; }
+
     }
     public class DBContextClass : DbContext
     {
